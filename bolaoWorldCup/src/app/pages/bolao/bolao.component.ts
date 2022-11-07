@@ -1,15 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-bolao',
+  selector: 'bwc-bolao',
   templateUrl: './bolao.component.html',
-  styleUrls: ['./bolao.component.scss']
+  styleUrls: ['./bolao.component.scss'],
 })
 export class BolaoComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

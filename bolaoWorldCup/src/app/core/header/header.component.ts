@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { faCircleUser } from '@fortawesome/free-solid-svg-icons';
+import { faCircleUser, faSignOut } from '@fortawesome/free-solid-svg-icons';
 import { Observable } from 'rxjs';
 import { IUsuario } from 'src/app/interfaces/IUsuario';
 import { UsuarioService } from 'src/app/services/usuario.service';
@@ -12,6 +12,7 @@ import { UsuarioService } from 'src/app/services/usuario.service';
 })
 export class HeaderComponent implements OnInit {
   faCircle = faCircleUser;
+  faLogout = faSignOut;
 
   user$!: Observable<IUsuario>;
   user!: IUsuario;

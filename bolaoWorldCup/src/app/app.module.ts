@@ -11,6 +11,9 @@ import { LoginComponent } from './pages/login/login.component';
 import { CommonModule } from '@angular/common';
 import { VmessageComponent } from './shared/components/vmessage/vmessage.component';
 import { HeaderComponent } from './core/header/header.component';
+import { RouterModule } from '@angular/router';
+import { SignupComponent } from './pages/signup/signup.component';
+import { BolaoComponent } from './pages/bolao/bolao.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +22,8 @@ import { HeaderComponent } from './core/header/header.component';
     LoginComponent,
     VmessageComponent,
     HeaderComponent,
+    SignupComponent,
+    BolaoComponent,
   ],
   imports: [
     BrowserModule,
@@ -28,6 +33,7 @@ import { HeaderComponent } from './core/header/header.component';
     ReactiveFormsModule,
     FormsModule,
     CommonModule,
+    RouterModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

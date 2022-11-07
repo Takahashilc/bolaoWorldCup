@@ -1,0 +1,81 @@
+.head{
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+
+.betline-matchup{
+    padding-bottom: 20px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.competitor{
+    border-radius: 5%;
+    justify-content: center;
+    padding: 16px;
+}
+button {
+    padding-left: 16px;
+}
+.right-facing-competitor{
+    background-color: rgb(179, 72, 72);
+    padding-left: 120px;
+    padding-right: 120px;
+}
+
+.middle-competitor{
+    background-color: rgb(179, 72, 72);
+}
+.left-facing-competitor{
+    background-color: rgb(179, 72, 72);
+    padding-left: 120px;
+    padding-right: 120px;
+}
+.right-emblem{
+    padding-right: 16px;
+    height: 45px;
+    width: 45px;
+}
+.left-emblem{
+    padding-left: 16px;
+    height: 45px;
+    width: 45px;
+}
+.right-facing-competitor:hover{
+    background-color: green;
+}
+.left-facing-competitor:hover{
+        background-color: green;
+}
+.middle-competitor:hover{
+    background-color: green;
+}
+
+.botaosalvar{
+    background: #FB7985;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    color: #FFFFFF;
+    font-family: Helvetica;
+    font-size: 15px;
+    font-weight: 100;
+    padding: 16px;
+    -webkit-box-shadow: 1px 1px 20px 0 #000000;
+    -moz-box-shadow: 1px 1px 20px 0 #000000;
+    box-shadow: 1px 1px 20px 0 #000000;
+    text-shadow: 1px 1px 20px #000000;
+    border: solid #ffffff 1px;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+}
+.botaosalvar:hover{
+    border: solid #FFFFFF 1px;
+    background: #ad0011;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    text-decoration: none;
+}

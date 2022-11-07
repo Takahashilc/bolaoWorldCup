@@ -1,17 +1,27 @@
 <header class="fixed-top">
     <nav class="navbar navbar-light bg-white">
-        <a class="navbar-brand">ALURAPIC</a>
+        <a class="navbar-brand"><img src="./assets/img/worldcup.svg" alt="Ícone copa do mundo" class="copasvg">Bolão Copa do Mundo 2022</a>
+        
+    <div>
+        <span>
+            <a [routerLink]="['']" class="navbar-text">Home</a>
+        </span>
+        <span>
+            <a [routerLink]="['bolao']" class="navbar-text">Bolão</a>
+        </span>
         
         <div *ngIf="(user$ |async) as user; else login" >
             <fa-icon [icon]="faCircle" class="mr-1"></fa-icon>
             <a class="mr-1">{{ user.name }}</a>
-            <a (click)="logout()">(Logout)</a>
+            <a (click)="logout()"><fa-icon [icon]="faLogout" class="mr-1"></fa-icon>></a>
         </div>
+        
         <ng-template #login>
             <span class="navbar-text">
-                Login
+                <a [routerLink]="['login']">Login</a>
             </span>
         </ng-template>
+    </div>
 
     </nav>
 </header>

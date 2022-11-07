@@ -1,0 +1,77 @@
+<h4 class="text-center top"> Registre-se para jogar no Bolão da Copa!</h4>
+
+<form [formGroup]="signupForm" class="form mt-4" (submit)="signup()" >
+    <div class="form-group">
+        <input  formControlName="email" placeholder="email" class="form-control" autofocus >
+        <bwc-vmessage 
+            *ngIf="signupForm.get('email')?.errors?.['required']"
+            text="E-mail obrigatório!">
+        </bwc-vmessage>
+        <bwc-vmessage 
+            *ngIf="signupForm.get('email')?.errors?.['email']"
+            text="E-mail inválido!">
+        </bwc-vmessage>   
+    </div>
+
+    <div class="form-group">
+        <input formControlName="fullName" placeholder="nome completo" class="form-control">
+        <bwc-vmessage 
+            *ngIf="signupForm.get('fullName')?.errors?.['required']"
+            text="Nome Completo obrigatório!">
+        </bwc-vmessage>
+        <bwc-vmessage 
+            *ngIf="signupForm.get('fullName')?.errors?.['minlength']"
+            text="Mínimo 2 caracteres!">
+        </bwc-vmessage>   
+        <bwc-vmessage 
+            *ngIf="signupForm.get('fullName')?.errors?.['maxlength']"
+            text="Máximo 40 caracteres!">
+        </bwc-vmessage> 
+    </div>
+
+    <div class="form-group">
+        <input formControlName="userName" placeholder="usuario" class="form-control">
+        <bwc-vmessage 
+            *ngIf="signupForm.get('userName')?.errors?.['required']"
+            text="Nome de usuário obrigatório!">
+        </bwc-vmessage>
+        <bwc-vmessage 
+            *ngIf="signupForm.get('userName')?.errors?.['minlength']"
+            text="Mínimo 2 caracteres!">
+        </bwc-vmessage>   
+        <bwc-vmessage 
+            *ngIf="signupForm.get('userName')?.errors?.['maxlength']"
+            text="Máximo 30 caracteres!">
+        </bwc-vmessage> 
+        <bwc-vmessage 
+            *ngIf="signupForm.get('userName')?.errors?.['lowerCase']"
+            text="Apenas letras minúsculas!">
+        </bwc-vmessage> 
+        <bwc-vmessage
+            text="Username already taken"
+            *ngIf="signupForm.get('userName')?.errors?.['userNameTaken']">
+        </bwc-vmessage>
+        <small *ngIf="signupForm.get('userName')?.valid"            class="text-success">User available</small>
+        
+    </div>
+
+    <div class="form-group">
+        <input formControlName="password" type="password" placeholder="senha" class="form-control">
+        <bwc-vmessage 
+            *ngIf="signupForm.get('password')?.errors?.['required']"
+            text="Senha obrigatório!">
+        </bwc-vmessage>
+        <bwc-vmessage 
+        *ngIf="signupForm.get('password')?.errors?.['minlength']"
+        text="Mínimo 8 caracteres!">
+    </bwc-vmessage>   
+    <bwc-vmessage 
+        *ngIf="signupForm.get('password')?.errors?.['maxlength']"
+        text="Máximo 14 caracteres!">
+    </bwc-vmessage> 
+    </div>
+
+    <button [disabled]="signupForm.invalid || signupForm.pending" class="btn btn-primary btn-block">Registrar</button>
+
+    <p>Já é usuário?<a [routerLink]="['/login']">Logue-se!</a></p>
+</form>

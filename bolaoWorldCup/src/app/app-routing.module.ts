@@ -4,13 +4,21 @@ import { AuthGuard } from './guards/auth.guard';
 import { BolaoComponent } from './pages/bolao/bolao.component';
 import { HomepageComponent } from './pages/homepage/homepage.component';
 import { LoginComponent } from './pages/login/login.component';
+import { SignupComponent } from './pages/signup/signup.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent, canActivate: [AuthGuard] },
   {
+    path: 'registrar',
+    component: SignupComponent,
+  },
+  {
     path: '',
     component: HomepageComponent,
-    children: [{ path: 'bolao', component: BolaoComponent }],
+  },
+  {
+    path: 'bolao',
+    component: BolaoComponent,
   },
 ];
 

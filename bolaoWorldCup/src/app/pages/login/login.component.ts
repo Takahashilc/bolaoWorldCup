@@ -5,7 +5,7 @@ import { PlatformDetectorService } from 'src/app/core/platform-detector/platform
 import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
-  selector: 'app-login',
+  selector: 'bwc-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss'],
 })

@@ -1,8 +1,6 @@
 @import "../node_modules/bootstrap/scss/bootstrap";
-$color-principal: rgb(147, 23, 59);
-$font-principal: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-  Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-  "Segoe UI Symbol";
+$color-principal: rgb(119, 22, 22);
+$font-principal: Roboto, Arial, sans-serif;
 
 *,
 *::before,
@@ -21,4 +19,8 @@ body {
 
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0;
+font-family: Roboto, "Helvetica Neue", sans-serif;
+color: white;
+}
+
